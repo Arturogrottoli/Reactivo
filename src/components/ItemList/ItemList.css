@@ -1,0 +1,7 @@
+.itemList{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 40px;
+}

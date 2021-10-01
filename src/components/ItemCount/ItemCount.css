@@ -1,0 +1,17 @@
+.itemCount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color:black
+    }
+
+
+.addToCartBtn{
+    background-color: lightgray;
+    font-family: 'Acme', sans-serif;
+}
+   
+.stock{
+    font-family: 'Acme', sans-serif;
+}

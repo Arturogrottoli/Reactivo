@@ -1,0 +1,17 @@
+.product-title{
+    background-color: lightgray;
+    font-family: 'Acme', sans-serif;
+    color:black
+}
+
+.product-description{
+   background-color: lightgray;
+   font-family: 'Acme', sans-serif;
+   color:black
+}
+
+.price{
+   
+   font-family: 'Acme', sans-serif;
+   color:black
+}
