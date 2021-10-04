@@ -30,12 +30,13 @@ const ItemCount = (props) => {
     return (
         <div className="itemCount">
             <div className="itemCountBtn">
-                <p className="stock">{stock}</p>
+                <p className="stock">Stock disponible: {stock}</p>
                 <button className="btn btn-danger" disabled={stock === '0'} onClick={resta}>-</button>
                 
                 <button className="btn btn-success" disabled={stock === '0'} onClick={suma}>+</button>
             </div>
-            <button className="btn btn-dark "   onClick={() => props.onAdd({unidades})}>Agregar al carrito {unidades} unidades</button>
+           
+            <button className="btn btn-dark " onClick={()=>props.onAdd({unidades})}>Agregar al carrito {unidades} unidades</button>
             
         </div>
     );

@@ -1,6 +1,6 @@
 import './NavBar.css'
 import logo from '../assets/cerveza.png';
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import CartWidget from '../CartWidget/CartWidget';
 
 
@@ -42,7 +42,8 @@ const funcion = ({itemList}) =>{
           </ul>
           <form class="d-flex">
           
-         <Link to="/Cart"><CartWidget/></Link>
+          <NavLink activeClassName="navLinkActive" className="navLink" to="/cart"><CartWidget/>
+          </NavLink>
          <h5 > 0 </h5>
             
           </form>
