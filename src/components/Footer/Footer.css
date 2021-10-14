@@ -1,0 +1,23 @@
+footer{
+    background: black;
+    padding: 1.5rem;
+    position:relative;
+    bottom: 0;   
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+footer a{
+    color: white;
+}
+footer a:hover{
+     color: lightgrey;
+ }
+.fab{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: white;
+}
+.fab:hover{
+    color: lightgrey;
+}

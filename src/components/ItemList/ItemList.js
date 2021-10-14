@@ -3,6 +3,8 @@ import Data from "../../Data/Data.js"
 import Item from "../Item/Item.js";
 import "./ItemList.css"
 import { useParams } from 'react-router';
+import { db } from "../../Firebase/Firebase"
+import { allItems, itemCat } from "../../Firebase/Firebase"
 
 
 //funcion que mapea los items 
@@ -13,32 +15,60 @@ const ItemList = () => {
     const [productos, setProductos] = useState([])
     const [cargando, setCargando] = useState(true)
     const {category} = useParams()
+    
 
-    //Retardo de 2 segundos mediante promise.
+    //Levanto todo mediante Firebase
 
-    useEffect(() => {
-
-        const productos = () =>{
-            return new Promise((resolve, reject)=>{
-                setTimeout(()=>{
-                    resolve(Data)
-                },2000)
+      useEffect(() => {
+          if(category != null){
+              const items=itemCat(category)
+              items.then((data)=>{
+                  const itemsAux=[]
+                  data.forEach(item => {
+                      itemsAux.push({id:item.id, title:item.data().title, description:item.data().description, price:item.data().price, stock:item.data().stock, pictureUrl:item.data().pictureUrl, detail:item.data().detail, category:item.data().category})
+                  });
+                  
+                  setProductos(itemsAux)
+                  setCargando(false)
+              })
+            }else{
+                const items=allItems()
+              items.then((data)=>{
+                  const itemsAux=[]
+                  data.forEach(item => {
+                      itemsAux.push({id:item.id, title:item.data().title, description:item.data().description, price:item.data().price, stock:item.data().stock, pictureUrl:item.data().pictureUrl, detail:item.data().detail, category:item.data().category})
+                  });
+                  
+                  setProductos(itemsAux)
+                  setCargando(false)
             })
         }
+    },[category] )             
+
+
+    //  useEffect(() => {
         
-        productos().then((items)=>{
-            if(category != null){
-                const productosFiltrados=items.filter((producto)=>producto.category===category)
-                setProductos(productosFiltrados)
-                setCargando(false) 
-            }else {
-                setProductos(items)
-                setCargando(false)
-            }
+    //  const productos = () =>{
+    //           return new Promise((resolve, reject)=>{
+    //               setTimeout(()=>{
+    //                   resolve(Data)
+    //               },2000)
+    //           })
+    //       }
+      
+    //       productos().then((items)=>{
+    //           if(category != null){
+    //               const productosFiltrados=items.filter((producto)=>producto.category===category)
+    //               setProductos(productosFiltrados)
+    //               setCargando(false) 
+    //           }else {
+    //               setProductos(items)
+    //               setCargando(false)
+    //           }
             
             
-        })
-    },[category])
+    //       })
+    //   },[category])
     
     return (
         <>

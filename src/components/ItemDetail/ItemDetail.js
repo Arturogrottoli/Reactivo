@@ -20,29 +20,25 @@ function ItemDetail({id, pictureUrl, title, description, price, stock, detail}){
         
         
         setBuy(true)
-        onAdd({id,title,price},props.unidades)
+        onAdd({id,title,price, pictureUrl},props.unidades)
         
        }
 
         return <>
-        <div className="divItem">
-                <div>
-                    <div>
-                        <img src={pictureUrl} alt={title}/> 
-                    </div>
-                </div>
-                
-            </div>
+
         
-        <div className="details col-md-6">
-            <br/>
+        <div className="container">
+        <div className="container-detail">                        
+        <img className="image-detail" src={pictureUrl} alt={title}/></div>                               
+        <div className="container-detail">
         <h2 className="product-title">{title}</h2>
         <p className="product-description">{detail}</p>
         <h4 className="price">Precio: <span>${price}</span></h4>
         
-        {!buy ? <ItemCount stock = {stock} onAdd={OnAddOriginal} /> : <Link to="/Cart"> <button>Finalizar Compra</button></Link>}
+        {!buy ? <ItemCount stock = {stock} onAdd={OnAddOriginal} /> : <Link to="/Cart"> <button type="button" className="btn btn-dark">Confirmar e ir al carrito</button></Link>}
+        </div>
     </div>
-       
+        
     
     </>
 }

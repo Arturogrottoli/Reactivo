@@ -1,53 +1,56 @@
 import './NavBar.css'
-import logo from '../assets/cerveza.png';
+import logo from '../assets/futbol.png';
 import { Link, NavLink } from "react-router-dom"
 import CartWidget from '../CartWidget/CartWidget';
+import React, {useContext} from "react";
+import { Context } from '../Context/CartContext'
 
+const Funcion = ({itemList}) =>{
 
-const funcion = ({itemList}) =>{
-
-  
+  const {cart} =useContext(Context)
     
     return(
          
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <Link to="/"><a class="navbar-brand" href="">ComidaRapida!</a></Link>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-lg navbar-light">
+      <div className="container-fluid">
+        <Link to="/"><a className="navbar-brand" href="">CasacasFutbol!</a></Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <Link to="/"><img src={logo} alt="logo" width="55" height="45" className="logo"></img> </Link>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <Link to="/"> <a class="nav-link active" aria-current="page" href="">Inicio</a></Link>
+        <Link to="/"><img src={logo} alt="logo" width="60" height="55" className="logo"></img> </Link>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav menu">
+            <li className="nav-item">
+            <Link to="/"> <a className="nav-link active" aria-current="page" href="">Inicio</a></Link>
             </li>
             
-            <li class="nav-item">
+            <li className="nav-item">
             
-            <Link to="/Con-papas"><a class="nav-link" href="">Con-papas</a> </Link>
+            <Link to="/Clubes"><a className="nav-link" href="">Clubes</a> </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
             
-            <Link to="/Sin-papas"> <a class="nav-link" href="">Sin-papas</a> </Link>
+            <Link to="/Selecciones"> <a className="nav-link" href="">Selecciones</a> </Link>
             </li>
-            <li class="nav-item">
             
-            <Link to="/Us"><a class="nav-link" href="">Nosotros</a></Link> 
-            </li>
-            <li class="nav-item">
+            <li className="nav-item">
             
-            <Link to="/Contact"> <a class="nav-link" href="">Contacto</a></Link>
+            <Link to="/contacto"> <a className="nav-link" href="">Contacto</a></Link>
             </li>
           </ul>
-          <form class="d-flex">
+          <div className="navcarrito">
+          <form >
+          
           
           <NavLink activeClassName="navLinkActive" className="navLink" to="/cart"><CartWidget/>
-          </NavLink>
-         <h5 > 0 </h5>
+         </NavLink>
+         
+         {
+         cart.map((item)=>
+         <h5 > {item.unidades} </h5>)}
             
           </form>
-          
+          </div>
         </div>
       </div>
     </nav>
@@ -56,4 +59,4 @@ const funcion = ({itemList}) =>{
         )
 }
 
-export default funcion
+export default Funcion

@@ -1,6 +1,5 @@
-import ItemCount from '../ItemCount/ItemCount'
 import ItemList from '../ItemList/ItemList'
-
+import "./ItemListContainer.css";
 
 const ItemListContainer = (props) =>{
 
@@ -10,7 +9,7 @@ const ItemListContainer = (props) =>{
         <>
             
             <br/>
-            <h2>{props.titulo}¿Cual combo querés?</h2>
+            <h2 className="titleContainer">¿Que camiseta querés?</h2>
             
             <ItemList/>
             

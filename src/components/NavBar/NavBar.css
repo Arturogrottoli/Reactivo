@@ -1,4 +1,43 @@
+
 .logo{
     padding: 0.7em;
        
+}
+
+.navbar-light .navbar-brand {
+    color: white !important;
+    font-family: 'Bebas Neue', cursive;
+    font-size: xx-large;
+}
+
+
+.navbar-light{
+    background: black !important;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: white !important;
+    border-radius: 0.5em;
+    font-size: 20px;
+    
+}
+
+.menu a:hover {
+    color: blue !important;
+    background-color: whitesmoke;
+}
+
+.navcarrito{
+    
+        
+     padding: 1rem;
+     color: white;
+     margin: 0px 640px;
+}
+
+.navbar-light .navbar-toggler {
+    color: white;
+    border-color: blue;
 }

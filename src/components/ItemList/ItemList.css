@@ -1,7 +1,10 @@
 .itemList{
+    position: relative;
     display: flex;
-    width: 80%;
+    flex-wrap: wrap;
+    width: 100%;
     align-items: center;
-    margin-top: 25px;
-    margin-left: 40px;
+    justify-content: center;
+    margin:auto;
+    
 }

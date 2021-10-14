@@ -9,6 +9,8 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ItemList from './components/ItemList/ItemList';
 import { CartFunction } from './components/Context/CartContext';
 import Cart from './components/Cart/Cart.js';
+import Footer from './components/Footer/Footer';
+import Contacto from './components/Contacto/Contacto';
 
 const App = () => {
   
@@ -27,13 +29,18 @@ const App = () => {
       <Route path="/cart" exact>
       <Cart/>
       </Route>
+      <Route path="/contacto" exact>
+      <Contacto />
+      </Route>
       <Route path="/:category" exact>
           <ItemList />
       </Route>
       <Route path="/:category/:id" exact>
           <ItemDetailContainer />
       </Route>
+      
       </Switch>
+      <Footer/>
     </div>
     </CartFunction>
     </BrowserRouter>

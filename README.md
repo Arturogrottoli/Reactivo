@@ -1,3 +1,9 @@
+El proyecto es un e-commerce por el momento para pedidos de comida rapida. Utilicé objetos que tenia de otro proyecto a la espera de si habia que tomar algun array de objetos de una API o si lo debiamos armar nosotros manualmente. 
+
+Es probable que la entrega final se mantenga el esqueleto del armado de e-commerce, pero que los objetos a vender y su detalle sea con otra tematica.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
