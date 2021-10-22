@@ -1,10 +1,20 @@
-El proyecto es un e-commerce por el momento para pedidos de comida rapida. Utilicé objetos que tenia de otro proyecto a la espera de si habia que tomar algun array de objetos de una API o si lo debiamos armar nosotros manualmente. 
+# Solo Casacas - React - E-commerce
 
-Es probable que la entrega final se mantenga el esqueleto del armado de e-commerce, pero que los objetos a vender y su detalle sea con otra tematica.
+![cover](./src/components/assets/Argentina.jpg)
 
 
+_Este proyecto es un e-commerce desarrollado mediante React.js. El concepto es una tienda virtual de camisetas de futbol, mediante el cual podemos aplicar todos los nuevos conocimientos adquiridos en este curso._
 
-# Getting Started with Create React App
+_La pagina web se puede ver en el dominio siguiente:
+
+https://chief-aftermath.surge.sh/ 
+
+o si prefiere tambien puede clonar el repositorio y seguir los siguientes pasos para poder observar el codigo y correr el sitio desde el programa que utilice para programar, en mi caso Visual Studio Code_
+
+
+# Comienzo del proyecto Create React App
+
+_El proyecto fue creado 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
