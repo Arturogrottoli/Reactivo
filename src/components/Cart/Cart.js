@@ -5,30 +5,33 @@ import "./Cart.css";
 
 
 const Cart = () => {
-    const {cart, total, remove, clear} =useContext(Context)
-
+    const {cart, total, remove, clear, size} =useContext(Context)
+    
       
     const [ name, setName ] = useState("");
     const [ email, setEmail ] = useState("");
     const [ lastName, setLastName ] = useState("");
     const [ phone, setPhone ] = useState("");
 
-       if(cart.lenght===0){
-         return(
-            <h1>No hay elementos agregados al carrito</h1>
-
-         )}
+    
+    
+    const [actSize, setActSize] = useState(0);
+    useEffect(()=>{
+        setActSize(size);
+    }, [size])
          
          return(
             <>
             
             <div className={"row"}>
             <div className={"col-lg-6 p-5"}>
-            <h2>Cantidad de items en carrito: <span className="badge badge-primary badge-pill">ver</span></h2>
-            {cart.map((item)=>
+            
+            <h2>Cantidad de items en carrito: <span className="badge badge-primary badge-pill">{actSize}</span></h2>{            
+        
+            cart.map((item)=>
             <div className="container">
             <div className="item-cart">
-                
+                <h5>Subtotal: ${item.subTotal}</h5>
                <img className="picture-card" alt="#" src={item.pictureUrl} ></img>
                <div className="product">
                <p>Remera: {item.title}</p>
@@ -73,7 +76,8 @@ const Cart = () => {
                             
                         </div>
                         <div className="text-right pt-4">
-                        <h2>Total del carrito:$ {total}</h2>
+                        <h2 className="total">Total del carrito:$ {total}</h2>
+                        <br/>
                         <button type="button" className="btn btn-danger mx-4" onClick={()=>clear()} >Vaciar carrito</button>
                         <button type="submit" className="btn btn-success mt-auto">Confirmar compra</button>
                          </div>

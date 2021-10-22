@@ -41,3 +41,7 @@
     color: white;
     border-color: blue;
 }
+
+.navbar-toggler-icon{
+    background: white;
+}

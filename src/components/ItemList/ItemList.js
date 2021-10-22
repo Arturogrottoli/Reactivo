@@ -1,9 +1,7 @@
 import React, {useState, useEffect } from 'react';
-import Data from "../../Data/Data.js"
 import Item from "../Item/Item.js";
 import "./ItemList.css"
 import { useParams } from 'react-router';
-import { db } from "../../Firebase/Firebase"
 import { allItems, itemCat } from "../../Firebase/Firebase"
 
 
@@ -46,30 +44,7 @@ const ItemList = () => {
     },[category] )             
 
 
-    //  useEffect(() => {
         
-    //  const productos = () =>{
-    //           return new Promise((resolve, reject)=>{
-    //               setTimeout(()=>{
-    //                   resolve(Data)
-    //               },2000)
-    //           })
-    //       }
-      
-    //       productos().then((items)=>{
-    //           if(category != null){
-    //               const productosFiltrados=items.filter((producto)=>producto.category===category)
-    //               setProductos(productosFiltrados)
-    //               setCargando(false) 
-    //           }else {
-    //               setProductos(items)
-    //               setCargando(false)
-    //           }
-            
-            
-    //       })
-    //   },[category])
-    
     return (
         <>
         

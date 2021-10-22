@@ -12,6 +12,7 @@ import Cart from './components/Cart/Cart.js';
 import Footer from './components/Footer/Footer';
 import Contacto from './components/Contacto/Contacto';
 
+
 const App = () => {
   
   

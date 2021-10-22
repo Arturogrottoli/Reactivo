@@ -9,15 +9,16 @@ footer{
 }
 footer a{
     color: white;
+    text-decoration: none;
 }
 footer a:hover{
      color: lightgrey;
  }
-.fab{
+footer i{
     font-size: 1.5rem;
     padding: 0.5rem;
-    color: white;
+    color: whitesmoke;
 }
-.fab:hover{
+footer i:hover{
     color: lightgrey;
 }
