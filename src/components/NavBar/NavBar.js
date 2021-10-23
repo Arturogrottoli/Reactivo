@@ -2,12 +2,11 @@ import './NavBar.css'
 import logo from '../assets/futbol.png';
 import { Link, NavLink } from "react-router-dom"
 import CartWidget from '../CartWidget/CartWidget';
-import React, {useContext} from "react";
-import { Context } from '../Context/CartContext'
+
 
 const Funcion = ({itemList}) =>{
 
-  const {cart,size} =useContext(Context)
+  
     
     return(
          
@@ -38,16 +37,19 @@ const Funcion = ({itemList}) =>{
             <Link to="/contacto"> <a className="nav-link" href="/#">Contacto</a></Link>
             </li>
           </ul>
+          
           <div className="navcarrito">
-          <form >
           
           
-          <NavLink activeClassName="navLinkActive" className="navLink" to="/cart"><CartWidget/>
+          
+          <NavLink activeClassName="navLinkActive" className="pull-right" to="/cart"><CartWidget/>
+          
          </NavLink>
          
                      
-          </form>
+         
           </div>
+          
         </div>
       </div>
     </nav>

@@ -15,6 +15,12 @@
     background: black !important;
 }
 
+.navcarrito{
+    position:relative;
+    width:100%;
+    left:0;
+    margin:0 100px;
+}
 
 .menu a {
     text-decoration: none;
@@ -29,18 +35,9 @@
     background-color: whitesmoke;
 }
 
-.navcarrito{
-    
-        
-     padding: 1rem;
-     color: white;
-     margin: 0px 640px;
-}
 
-.navbar-light .navbar-toggler {
-    color: white;
-    border-color: blue;
-}
+
+
 
 .navbar-toggler-icon{
     background: white;

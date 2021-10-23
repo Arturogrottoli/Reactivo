@@ -1,10 +1,16 @@
-import logoCarrito from '../assets/carritowhite.png';
-
+import React, {useContext} from "react";
+import { Context } from '../Context/CartContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import "./CartWidget.css";
 
 const CartWidget = () =>{
+    const {unidades} = useContext(Context)
     return (
-        <img src={logoCarrito} alt="logo" width="46" height="36" className="logoCarrito" ></img>
+        <>
+        <i ><FontAwesomeIcon icon={faShoppingCart}/><span className="badge badge-danger m-1">{unidades}</span></i>
         
+        </>
     )
 }
 

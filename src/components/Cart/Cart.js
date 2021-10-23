@@ -2,10 +2,11 @@ import React, {useContext} from "react";
 import  {useState, useEffect } from "react";
 import { Context } from '../Context/CartContext'
 import "./Cart.css";
+import { NavLink } from "react-router-dom"
 
 
 const Cart = () => {
-    const {cart, total, remove, clear, size} =useContext(Context)
+    const {cart,unidades, total, remove, clear} =useContext(Context)
     
       
     const [ name, setName ] = useState("");
@@ -13,21 +14,18 @@ const Cart = () => {
     const [ lastName, setLastName ] = useState("");
     const [ phone, setPhone ] = useState("");
 
-    
-    
-    const [actSize, setActSize] = useState(0);
-    useEffect(()=>{
-        setActSize(size);
-    }, [size])
-         
+    console.log(unidades)
+             
          return(
             <>
             
             <div className={"row"}>
             <div className={"col-lg-6 p-5"}>
             
-            <h2>Cantidad de items en carrito: <span className="badge badge-primary badge-pill">{actSize}</span></h2>{            
-        
+            {unidades===0?
+               <h2> Carrito vacío. Volver al <NavLink to={"/"}>Inicio</NavLink></h2>
+            :
+            
             cart.map((item)=>
             <div className="container">
             <div className="item-cart">

@@ -39,22 +39,19 @@ const CartFunction = ({ children }) => {
      const nuevoCarrito=cart.filter((item)=>item.id!==id)
      setCart(nuevoCarrito)
      setTotal(total-(cantidad*price))
+     setUnidades(cantidad)
      }
 
-     const getSize=()=>{
-        let a = 0;
-        cart.map(i => (a += i.total))
-        return a;
-    }
-     
+         
 
      const clear=()=>{
          setCart([])
          setTotal(0)
+         setUnidades(1)
      }
 
 
-    return <Context.Provider value={{cart,unidades, total, onAdd, remove, clear, size: getSize() }}>
+    return <Context.Provider value={{cart,unidades, total, onAdd, remove, clear }}>
            { children }
           </Context.Provider>
     }
