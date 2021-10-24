@@ -39,7 +39,7 @@ const CartFunction = ({ children }) => {
      const nuevoCarrito=cart.filter((item)=>item.id!==id)
      setCart(nuevoCarrito)
      setTotal(total-(cantidad*price))
-     setUnidades(cantidad)
+     setUnidades(cantidad-1)
      }
 
          
@@ -47,7 +47,7 @@ const CartFunction = ({ children }) => {
      const clear=()=>{
          setCart([])
          setTotal(0)
-         setUnidades(1)
+         setUnidades(0)
      }
 
 

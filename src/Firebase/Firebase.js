@@ -15,12 +15,7 @@ const firebaseConfig = {
 
   
 
-  //  export const getFirebase = () =>{
-  //   return app
-  // }
-  //export const getFirebase=()=>{return app}
-
-  //export const db= getFirestore(app)
+ 
 
 // Data Base de Firebase
 

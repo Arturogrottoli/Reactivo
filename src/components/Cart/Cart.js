@@ -1,9 +1,9 @@
 import React, {useContext} from "react";
-import  {useState, useEffect } from "react";
+import  {useState} from "react";
 import { Context } from '../Context/CartContext'
 import "./Cart.css";
-import { NavLink } from "react-router-dom"
-
+import { getFirestore} from  "firebase/firestore"
+import {NavLink} from "react-router-dom"
 
 const Cart = () => {
     const {cart,unidades, total, remove, clear} =useContext(Context)
@@ -13,11 +13,44 @@ const Cart = () => {
     const [ email, setEmail ] = useState("");
     const [ lastName, setLastName ] = useState("");
     const [ phone, setPhone ] = useState("");
+    const [cargando, setCargando] = useState(true)
 
-    console.log(unidades)
+    // function handleSubmit(event){
+    //     event.preventDefault();
+        
+    //         const db = getFirestore();
+    //         const orders = db.collection("orders");
+    //         const order = {
+    //             buyer: {
+    //                 name: name,
+    //                 lastName: lastName,
+    //                 phone: phone,
+    //                 email: email,
+    //             },
+    //             items: cart,
+    //             date: new Date(),
+    //             total: total,
+    //         }
+    //         orders.add(order).then(function (docRef) {
+    //             order.items.map(i => {
+    //                 const itemsList = db.collection("items").doc(i.id);
+    //                 itemsList.update({
+    //                     stock: (i.stock - i.total)
+    //                 })
+    //                 return true;
+    //             })
+    //             console.log(docRef.id)
+                
+    //             setCargando(false)
+    //             clear();
+    //         })
+    //         };
+        
+    
+
              
          return(
-            <>
+            <div>
             
             <div className={"row"}>
             <div className={"col-lg-6 p-5"}>
@@ -47,7 +80,7 @@ const Cart = () => {
              
              <div className={"col-lg-6 p-5"}>
                     <h2>Datos Personales:</h2>
-                    <form >
+                    <form  >
                         <div className="row">
                             <div className="col p-3">
                                 <input required={true} onChange={(e) => setName(e.target.value)} type="text"
@@ -77,14 +110,15 @@ const Cart = () => {
                         <h2 className="total">Total del carrito:$ {total}</h2>
                         <br/>
                         <button type="button" className="btn btn-danger mx-4" onClick={()=>clear()} >Vaciar carrito</button>
-                        <button type="submit" className="btn btn-success mt-auto">Confirmar compra</button>
+                        <NavLink  to="/cartfinal"><button  className="btn btn-success mt-auto" onClick={()=>clear()}>Confirmar compra</button></NavLink>
+                        
                          </div>
                     </form>
                 </div>
            
                 </div>
                
-           </>
+              </div>
     )
       
 }

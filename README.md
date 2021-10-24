@@ -5,82 +5,58 @@
 
 _Este proyecto es un e-commerce desarrollado mediante React.js. El concepto es una tienda virtual de camisetas de futbol, mediante el cual podemos aplicar todos los nuevos conocimientos adquiridos en este curso._
 
-_La pagina web se puede ver en el dominio siguiente:
+_La pagina web se puede ver en el dominio siguiente:._
 
 https://chief-aftermath.surge.sh/ 
 
-o si prefiere tambien puede clonar el repositorio y seguir los siguientes pasos para poder observar el codigo y correr el sitio desde el programa que utilice para programar, en mi caso Visual Studio Code_
+_o si prefiere tambien puede clonar el repositorio y seguir los siguientes pasos para poder observar el codigo y correr el sitio desde el programa que utilice para programar, en mi caso Visual Studio Code._
 
 
 # Comienzo del proyecto Create React App
 
-_El proyecto fue creado 
+_El proyecto fue creado en visual studio code, una vez que tenemos la carpeta utilizamos la terminal
+y  ejecutamos el comando npm install -g create-react-app (Con esto instalamos React Js)_.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Una vez finalizada esa instalacion creamos la aplicacion usando el comando create-react-app my-app (Donde my-app es el nombre que le querramos poner al archivo)_
 
-## Available Scripts
+# Clonar repositorio
 
-In the project directory, you can run:
+_Una de las maneras mas faciles que tenemos para clonar el repositorio es entrar a:_
+
+https://github.com/Arturogrottoli/Reactivo
+
+_Alli pulsamos el boton verde "code" y descargamos el archivo zip, el mismo debe ser descomprimido en la carpeta donde hayamos creado nuestra app._
+
+# Instalaciones necesarias
+
+_Para poder correr este sitio con normalidad necesitamos llevar a cabo varias instalaciones, de lo contrario hay elementos que no van a poder ser visualizados, o directamente no vamos a poder tener acceso a nuestra base de datos._
+
+### `Bootstrap`
+
+_Encargado de dar estilos y mejorar la parte estetica del sitio, para que se vean debemos instalarlo en React escribiendo el siguiente comando en la consola:_
+
+npm install react-bootstrap bootstrap
+
+### `FontAwesomeIcons`
+
+_Son los iconos que utilizamos en el footer para las redes sociales y en el carrito del Navbar, para poder acceder a ellos se debe realizar la siguiente instalaciones en consola:_
+
+
+
+### `Firebase`
+
+_Es la base de datos donde se encuentran todos nuestros productos, para poder instalarla necesitamos tener una cuenta de gmail. En el sitio https://firebase.google.com/ se encuentra toda la informacion para poder utilizarla mediante React._
+
+
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para poder correr el sitio debemos colocarnos en el directorio de nuestra carpeta en la terminal y ejecutar npm start, esto nos va a abrir automaticamente el navegador con la direccion
+[http://localhost:3000](http://localhost:3000).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+# gif del sitio
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+El sitio queda compuesto de la siguiente manera:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![gif](./src/components/assets/Ecommerce.gif)

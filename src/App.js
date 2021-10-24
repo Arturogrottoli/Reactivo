@@ -11,6 +11,7 @@ import { CartFunction } from './components/Context/CartContext';
 import Cart from './components/Cart/Cart.js';
 import Footer from './components/Footer/Footer';
 import Contacto from './components/Contacto/Contacto';
+import CartFinal from './components/CartFinal/CartFinal';
 
 
 const App = () => {
@@ -33,13 +34,16 @@ const App = () => {
       <Route path="/contacto" exact>
       <Contacto />
       </Route>
+      <Route path="/cartfinal" exact>
+          <CartFinal />
+      </Route> 
       <Route path="/:category" exact>
           <ItemList />
       </Route>
       <Route path="/:category/:id" exact>
           <ItemDetailContainer />
       </Route>
-      
+         
       </Switch>
       <Footer/>
     </div>

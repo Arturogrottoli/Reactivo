@@ -36,6 +36,7 @@ const Funcion = ({itemList}) =>{
             
             <Link to="/contacto"> <a className="nav-link" href="/#">Contacto</a></Link>
             </li>
+            
           </ul>
           
           <div className="navcarrito">
