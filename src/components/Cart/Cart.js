@@ -2,7 +2,6 @@ import React, {useContext} from "react";
 import  {useState} from "react";
 import { Context } from '../Context/CartContext'
 import "./Cart.css";
-import { getFirestore} from  "firebase/firestore"
 import {NavLink} from "react-router-dom"
 
 const Cart = () => {
@@ -15,37 +14,7 @@ const Cart = () => {
     const [ phone, setPhone ] = useState("");
     const [cargando, setCargando] = useState(true)
 
-    // function handleSubmit(event){
-    //     event.preventDefault();
-        
-    //         const db = getFirestore();
-    //         const orders = db.collection("orders");
-    //         const order = {
-    //             buyer: {
-    //                 name: name,
-    //                 lastName: lastName,
-    //                 phone: phone,
-    //                 email: email,
-    //             },
-    //             items: cart,
-    //             date: new Date(),
-    //             total: total,
-    //         }
-    //         orders.add(order).then(function (docRef) {
-    //             order.items.map(i => {
-    //                 const itemsList = db.collection("items").doc(i.id);
-    //                 itemsList.update({
-    //                     stock: (i.stock - i.total)
-    //                 })
-    //                 return true;
-    //             })
-    //             console.log(docRef.id)
-                
-    //             setCargando(false)
-    //             clear();
-    //         })
-    //         };
-        
+         
     
 
              

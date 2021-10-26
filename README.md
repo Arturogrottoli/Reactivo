@@ -51,12 +51,36 @@ _Es la base de datos donde se encuentran todos nuestros productos, para poder in
 
 ### `npm start`
 
-Para poder correr el sitio debemos colocarnos en el directorio de nuestra carpeta en la terminal y ejecutar npm start, esto nos va a abrir automaticamente el navegador con la direccion
+_Para poder correr el sitio debemos colocarnos en el directorio de nuestra carpeta en la terminal y ejecutar npm start, esto nos va a abrir automaticamente el navegador con la direccion_
 [http://localhost:3000](http://localhost:3000).
 
 
-# gif del sitio
+# Gif del sitio
 
-El sitio queda compuesto de la siguiente manera:
+_El sitio queda compuesto de la siguiente manera:_
 
 ![gif](./src/components/assets/Ecommerce.gif)
+
+# Partes del la app
+
+_Algunas de las partes fundamentales que componen el sitio son las siguientes:_
+
+### `App.js`
+
+_En el se encuentran todas las rutas y las funcionaes que componen el sitio, se encarga tambien de linkearlas segun corresponda._
+
+### `NavBar.js`
+
+_Se encarga de dirigirnos a las diferentes partes de la App (Inicio, contacto y cart) mediante los links, tambien utiliza funciones para lograr el filtrado entre camisetas de clubes y de selecciones_
+
+### `Inicio`
+
+_Mediante ItemList.js se mapean todos los elemenos de la base de datos y se imprimen con sus respectivas tarjetas._
+
+### `ItemDetail.js`
+
+_Se visualiza los items elegidos, pero con otro formato y con mas detalles, tambien utiliza el itemCount para poder elegir la cantidad de items a seleccionar y nos da la opcion de ir al carrito luego de hacerlo._
+
+### `Cart`
+
+_El carrito se encuentra vacio en primer instancia junto con un formulario para llenar los datos del comprador. A medida que vamos agregando items se los va mostrando con unas tarjetas mas pequeñas, junto con el precio total final de todos los elementos que vayamos acumulando dentro del carro._
