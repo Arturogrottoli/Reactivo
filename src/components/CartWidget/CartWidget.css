@@ -9,3 +9,21 @@ i :hover{
     color: blue !important;
     background-color: whitesmoke;
 }
+
+.cantidadCarrito{
+
+    background-color: #F44336;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    top: -5px;
+    left: 1px;
+}
+.cantidadCarrito h5 {
+    font-size: 12px !important;
+    line-height: 19px;
+  }

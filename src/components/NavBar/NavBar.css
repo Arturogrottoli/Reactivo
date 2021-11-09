@@ -17,8 +17,9 @@
 
 .navcarrito{
     position:relative;
-    margin:auto;
-    left: 0;
+    margin-left: 600px;
+    
+    
 }
 
 .menu a {

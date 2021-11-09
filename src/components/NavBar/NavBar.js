@@ -12,7 +12,7 @@ const Funcion = ({itemList}) =>{
          
       <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
-        <Link to="/"><a className="navbar-brand" href="/#">CasacasFutbol!</a></Link>
+        <Link to="/" className="navbar-brand">CasacasFutbol!</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -20,21 +20,21 @@ const Funcion = ({itemList}) =>{
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav menu">
             <li className="nav-item">
-            <Link to="/"> <a className="nav-link active" aria-current="page" href="/#">Inicio</a></Link>
+            <Link to="/" className="nav-link active">Inicio</Link>
             </li>
             
             <li className="nav-item">
             
-            <Link to="/Clubes"><a className="nav-link" href="/#">Clubes</a> </Link>
+            <Link to="/Clubes" className="nav-link">Clubes</Link>
             </li>
             <li className="nav-item">
             
-            <Link to="/Selecciones"> <a className="nav-link" href="/#">Selecciones</a> </Link>
+            <Link to="/Selecciones" className="nav-link" >Selecciones</Link>
             </li>
             
             <li className="nav-item">
             
-            <Link to="/contacto"> <a className="nav-link" href="/#">Contacto</a></Link>
+            <Link to="/contacto" className="nav-link">Contacto</Link>
             </li>
             
           </ul>

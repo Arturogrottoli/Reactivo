@@ -8,7 +8,7 @@ const CartWidget = () =>{
     const {unidades} = useContext(Context)
     return (
         <>
-        <i ><FontAwesomeIcon icon={faShoppingCart}/><span className="badge badge-danger m-1">{unidades}</span></i>
+        <i ><FontAwesomeIcon icon={faShoppingCart}/><span className="cantidadCarrito"><h5>{unidades}</h5></span></i>
         
         </>
     )

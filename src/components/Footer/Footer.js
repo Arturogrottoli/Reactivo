@@ -9,16 +9,16 @@ function Footer() {
         <footer>
             <ul className="nav justify-content-center">
             <li className="nav-item">
-            <Link to="/"> <a className="nav-link active" aria-current="page" href="/#">Inicio</a></Link>
+            <Link to="/"className="nav-link active"> Inicio</Link>
             </li>
             <li className="nav-item">
-            <Link to="/Clubes"><a className="nav-link" href="/#">Clubes</a> </Link>
+            <Link to="/Clubes" className="nav-link">Clubes </Link>
             </li>
             <li className="nav-item">
-            <Link to="/Selecciones"> <a className="nav-link" href="/#">Selecciones</a> </Link>
+            <Link to="/Selecciones" className="nav-link"> Selecciones</Link>
             </li>
             <li className="nav-item">
-            <Link to="/contacto"> <a className="nav-link" href="/#">Contacto</a></Link>
+            <Link to="/contacto" className="nav-link"> Contacto</Link>
             </li>
             </ul>
             <div className="text-center">

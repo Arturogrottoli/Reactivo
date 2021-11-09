@@ -3,6 +3,7 @@ import Item from "../Item/Item.js";
 import "./ItemList.css"
 import { useParams } from 'react-router';
 import { allItems, itemCat } from "../../Firebase/Firebase"
+import Loading from '../Loading/Loading.js';
 
 
 //funcion que mapea los items 
@@ -51,7 +52,7 @@ const ItemList = () => {
         <div className="itemList">
             
                 
-                {cargando ? <h1>Cargando...</h1> :
+                {cargando ? <Loading/> :
                 productos.map((producto) => (
 
                     //saco todos los valores desde el data

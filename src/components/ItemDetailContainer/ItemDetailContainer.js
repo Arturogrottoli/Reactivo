@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom";
 import { only} from '../../Firebase/Firebase'
+import Loading from '../Loading/Loading';
 
 
 const ItemDetailContainer = () => {
@@ -24,7 +25,7 @@ const ItemDetailContainer = () => {
           
        return (
         <>
-            {loading ? <h1>Cargando...</h1> :
+             {loading ? <Loading/> :
             <ItemDetail  id={producto.id} title={producto.title} detail={producto.detail} price={producto.price} stock={producto.stock} category={producto.category} pictureUrl={producto.pictureUrl} />
             
              }

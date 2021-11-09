@@ -22,7 +22,7 @@ const Contacto = () =>{
                         <p>Nuestras vías de contacto son:</p>
                        <ul>
                            <li>Teléfono: +549 221-458921XX (Podes enviarnos tu whatsapp)</li>
-                           <li>Email: <a href={"mailto:contacto@casacasfutbol.com"}>contacto@casacasfutbol.com</a></li>
+                           <li>Email: contacto@casacasfutbol.com</li>
                            <li>Visitá nuestras redes sociales!</li>
                        </ul>
                     </div>

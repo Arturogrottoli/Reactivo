@@ -7,7 +7,7 @@ const ItemListContainer = (props) =>{
     return (
         <>
             <br/>
-            <h2 className="titleContainer">¿Que camiseta querés?</h2>
+            <h2 className="titleContainer">¿Qué camiseta querés?</h2>
             <ItemList/>
             
         </>
