@@ -28,7 +28,7 @@ const Cart = () => {
               {cart.map((item) =>
 
                 <Card key={`cart-${item.id}`} className="col-6" style={{
-                  width: "200px", height: "350px"
+                  width: "200px", height: "350px", border: "solid black 0.1px",
 
                 }}>
 
@@ -77,7 +77,7 @@ const Cart = () => {
 
             </div>
             <div className="text-right pt-4">
-              <h2 className="total">Total del carrito:$ {total}</h2>
+              <h2 className="total">Total del carrito:${total}</h2>
               <br />
               <button type="button" className="btn btn-danger mx-4" onClick={() => clear()} >Vaciar carrito</button>
               <NavLink to="/cartfinal"><button className="btn btn-success mt-auto" onClick={() => clear()}>Confirmar compra</button></NavLink>
